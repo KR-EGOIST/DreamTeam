@@ -10,6 +10,10 @@
   <!-- 부트스트랩 연결 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- 부트스트랩 스크립트 연결 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <!-- 외부 자바스크립트 파일 연결 -->
   <script src="index.js" defer type="module"></script>
   <!-- jquery 연결 -->
@@ -17,13 +21,89 @@
 </head>
 
 <body>
-  <!-- 상단바 -->
-  <div class="mytitle">
-    <h1 class="title">DreamTeam</h1>
-    <button id="toggle-btn">팀원 저장하기</button>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="nav-img" src="../resource/title.jpg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Carousel -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="cloud.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>윤진호</h5>
+          <p>포기하지말고 화이팅!</p>
+          <div>
+            <button class="search-btn">ABOUT HIM</button>
+            <button class="toggle-btn">JOIN US</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="cloud.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>장재민</h5>
+          <p>웹개발 복습! 봐도봐도 모르겠다</p>
+          <div>
+            <button class="search-btn">ABOUT HIM</button>
+            <button class="toggle-btn">JOIN US</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="cloud.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>장성원</h5>
+          <p>웹개발 기초 습득</p>
+          <div>
+            <button class="search-btn">ABOUT HIM</button>
+            <button class="toggle-btn">JOIN US</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
   <!-- 포스팅박스 -->
   <div class="mypostingbox" id="postingbox">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="image" placeholder="이미지 주소">
+      <label for="floatingInput">이미지 주소</label>
+    </div>
     <div class="form-floating mb-3">
       <input type="email" class="form-control" id="name" placeholder="이름">
       <label for="floatingInput">이름</label>
@@ -40,7 +120,7 @@
       <label for="floatingInput">MBTI</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="text" placeholder="본인 설명">
+      <input type="email" class="form-control" id="comment" placeholder="본인 설명">
       <label for="floatingInput">본인 설명</label>
     </div>
     <div class="mybtn">
@@ -48,21 +128,8 @@
     </div>
   </div>
   <!-- 팀원 카드 -->
-  <div class="Team">
-    <div class="card mb-3" style="max-width: 100%; height: 400px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="윤진호.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h3 class="card-name">윤진호 <span style="font-size:large;">팀원</span></h3>
-            <h5>MBTI</h5>
-            <p class="card-text">객관적으로 살펴본 자신의 장점 및 설명</p>
-            <button class="delete-btn">삭제</button>
-          </div>
-        </div>
-      </div>
+  <div id="Team">
+    <div id="card" class="row row-cols-1 row-cols-md-4 g-4">
     </div>
   </div>
 </body>

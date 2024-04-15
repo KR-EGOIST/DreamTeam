@@ -4,30 +4,47 @@
   padding: 0;
 }
 
-/* 상단바 이미지 및 크기 조절 */
-.mytitle {
-  height: 250px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  background-image: url('../resource/title.jpg');
-  background-position: center;
-  background-size: contain;
+nav {
+  background-color: black;
 }
 
-/* 상단바 제목 */
-.mytitle .title {
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 5px;
+.nav-img {
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
+}
+
+.nav-link active {
   color: white;
 }
 
-/* 상단바 버튼 */
-.mytitle button {
+.carousel-inner {
+  width: auto;
+  height: 500px; /* 이미지 높이 변경 */
+}
+.carousel-item {
+  width: auto;
+  height: 100%;
+}
+.d-block {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+/* 검색 버튼 */
+.search-btn {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* 토글 버튼 */
+.toggle-btn {
   width: 150px;
   height: 50px;
   background-color: black;
@@ -47,7 +64,7 @@ button:hover {
 /* 포스팅 박스 */
 .mypostingbox {
   width: 500px;
-  margin: 30px auto 0px auto;
+  margin: 30px auto;
   padding: 20px;
   box-shadow: 0px 0px 3px 0px black;
   border-radius: 5px;
@@ -65,7 +82,7 @@ button:hover {
 }
 
 /* 팀원 카드 삭제 버튼 */
-.delete-btn {
+.card-btn button {
   width: 100px;
   height: 50px;
   background-color: transparent;
