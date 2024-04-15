@@ -29,3 +29,14 @@ const db = getFirestore(app);
 $('#toggle-btn').click(async function () {
   $('#postingbox').toggle();
 });
+
+// 삭제 기능
+// this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
+$('.delete-btn').click(async function () {
+  if (confirm('정말 삭제하시겠습니까?') == true) {
+    await deleteDoc(doc(db, 'DreamTeam', this.value));
+    window.location.reload();
+  } else {
+    return false;
+  }
+});
