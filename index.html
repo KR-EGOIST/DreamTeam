@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DreamTeam</title>
+  <!-- 외부 css 파일 연결 -->
   <link rel="stylesheet" href="style.css" />
+  <!-- 부트스트랩 연결 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- 외부 자바스크립트 파일 연결 -->
   <script src="index.js" defer type="module"></script>
+  <!-- jquery 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <h1>안녕하세요</h1>
+  <!-- 상단바 -->
+  <div class="mytitle">
+    <h1 class="title">DreamTeam</h1>
+    <button id="toggle-btn">팀원 저장하기</button>
+  </div>
+  <!-- 포스팅박스 -->
+  <div class="mypostingbox" id="postingbox">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="name" placeholder="이름">
+      <label for="floatingInput">이름</label>
+    </div>
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupSelect01">직책</label>
+      <select class="form-select" id="position">
+        <option value="팀장">팀장</option>
+        <option value="팀원">팀원</option>
+      </select>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="MBTI" placeholder="MBTI">
+      <label for="floatingInput">MBTI</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="text" placeholder="본인 설명">
+      <label for="floatingInput">본인 설명</label>
+    </div>
+    <div class="mybtn">
+      <button id="save-btn" type="button" class="btn btn-primary">저장하기</button>
+    </div>
+  </div>
+  <!-- 팀원 카드 -->
+  <div class="Team">
+    <div class="card mb-3" style="max-width: 100%; height: 400px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="윤진호.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-name">윤진호 <span style="font-size:large;">팀원</span></h3>
+            <h5>MBTI</h5>
+            <p class="card-text">객관적으로 살펴본 자신의 장점 및 설명</p>
+            <button class="delete-btn">삭제</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

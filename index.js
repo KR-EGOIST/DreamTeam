@@ -5,6 +5,8 @@ import {
   collection,
   addDoc,
   getDocs,
+  updateDoc,
+  deleteDoc,
 } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
 
 // Firebase 구성 정보 설정
@@ -22,3 +24,8 @@ const firebaseConfig = {
 // Firebase 인스턴스 초기화
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+// 포스팅 박스 토글 (사라졌다 생겼다)
+$('#toggle-btn').click(async function () {
+  $('#postingbox').toggle();
+});
