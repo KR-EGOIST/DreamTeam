@@ -42,16 +42,22 @@ $('#save-btn').click(async function () {
   let MBTI = $('#MBTI').val();
   let comment = $('#comment').val();
 
-  let doc = {
-    image: image,
-    name: name,
-    position: position,
-    MBTI: MBTI,
-    comment: comment,
-  };
-  await addDoc(collection(db, 'DreamTeam'), doc);
-  alert('팀원이 추가되었습니다!');
-  window.location.reload();
+  if (!image || !name || !MBTI || !comment) {
+    // 값을 입력하지 않으면
+    alert('정보를 입력하세요!');
+  } else {
+    let doc = {
+      image: image,
+      name: name,
+      position: position,
+      MBTI: MBTI,
+      comment: comment,
+    };
+
+    await addDoc(collection(db, 'todolist'), doc);
+    alert('팀원이 추가되었습니다!');
+    window.location.reload();
+  }
 });
 
 // 데이터 가져오기
