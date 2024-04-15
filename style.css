@@ -4,20 +4,20 @@
   padding: 0;
 }
 
+/* 내비게이션바 */
 nav {
   background-color: black;
 }
-
 .nav-img {
   height: 60px;
   width: 60px;
   margin-left: 20px;
 }
-
 .nav-link active {
   color: white;
 }
 
+/* 캐러셀 */
 .carousel-inner {
   width: auto;
   height: 500px; /* 이미지 높이 변경 */
@@ -70,8 +70,12 @@ button:hover {
   border-radius: 5px;
 }
 
+/* 포스팅 박스 저장하기 버튼 */
 .mybtn {
   text-align: center;
+}
+.mybtn button {
+  display: inline-block;
 }
 
 /* 팀원 카드 */
