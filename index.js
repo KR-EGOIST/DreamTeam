@@ -54,7 +54,7 @@ $('#save-btn').click(async function () {
       comment: comment,
     };
 
-    await addDoc(collection(db, 'todolist'), doc);
+    await addDoc(collection(db, 'DreamTeam'), doc);
     alert('팀원이 추가되었습니다!');
     window.location.reload();
   }
