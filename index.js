@@ -3,6 +3,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebas
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
 import {
   getDocs,
+  getDoc,
   collection,
   addDoc,
   doc,
@@ -81,7 +82,7 @@ docs.forEach((doc) => {
       <p class="card-MBTI">${MBTI}</p>
       <p class="card-comment">${comment}</p>
       <div class="card-btn">
-        <button value="${id}" class="edit-btn">수정</button>
+        <button value="${id}" class="edit-btn" data-bs-toggle="modal" data-bs-target="#updateModal">수정</button>
         <button value="${id}" class="delete-btn">삭제</button>
       </div>
     </div>
@@ -89,6 +90,8 @@ docs.forEach((doc) => {
 </div>`;
   $('#card').append(temp_html);
 });
+
+
 
 // 삭제 기능
 // this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
@@ -109,7 +112,6 @@ const modals = document.querySelectorAll('.modal');
 const btnOpenPopups = document.querySelectorAll('.btn-open-popup');
 
 // 각 버튼에 대해 클릭 이벤트 리스너 추가
-
 btnOpenPopups.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(
@@ -125,7 +127,6 @@ btnOpenPopups.forEach((button) => {
 });
 
 // 모든 모달에 대해 클릭 이벤트 리스너 추가
-
 modals.forEach((modal) => {
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
@@ -136,4 +137,87 @@ modals.forEach((modal) => {
       }
     }
   });
+});
+
+// HTML 문서의 로딩이 완료되었을 때, 해당 함수를 실행
+document.addEventListener("DOMContentLoaded", function () {
+  // elements
+  var modalBtn = document.getElementById("modalBtn");
+  var modal = document.getElementById("myModal");
+  var closeBtn = document.getElementById("closeBtn");
+
+  // functions
+  function toggleModal() {
+    modal.classList.toggle("show");
+  }
+
+  // events
+  modalBtn.addEventListener("click", toggleModal);
+  closeBtn.addEventListener("click", toggleModal);
+
+  window.addEventListener("click", function (event) {
+    // 모달의 검은색 배경 부분이 클릭된 경우 닫히도록 하는 코드
+    if (event.target === modal) {
+      toggleModal();
+    }
+  })
+
+});
+
+// 수정 버튼 클릭시 모달창 팝업
+$('.edit-btn').click(async function () {
+  let tar_id = this.value;
+  console.log(tar_id);
+
+  let tar_doc = doc(db, 'DreamTeam', tar_id);
+  let rcv_Doc = await getDoc(tar_doc);
+  let tar_data = rcv_Doc.data();
+
+  let image = tar_data.image;
+  let name = tar_data.name;
+  let position = tar_data.position;
+  let MBTI = tar_data.MBTI;
+  let comment = tar_data.comment;
+
+  /* 데이터 로드 확인용
+  console.log(image);
+  console.log(name);
+  console.log(position);
+  console.log(MBTI);
+  console.log(comment);
+  */
+
+  $('#updateModalLabel').text("수정 대상: " + name);
+  
+});
+
+/* 수정완료 버튼 클릭시 Update 실행 */
+$('#confirm-btn').click(async function () {
+  let image = $('#update_image').val();
+  let name = $('#update_name').val();
+  let position = $('#update_position').val();
+  let MBTI = $('#update_MBTI').val();
+  let comment = $('#update_comment').val();
+
+  if (!image || !name || !MBTI || !comment) {
+    // 값을 입력하지 않으면
+    alert('빈칸은 불가능합니다.');
+  } else {
+    let doc = {
+      image: image,
+      name: name,
+      position: position,
+      MBTI: MBTI,
+      comment: comment,
+    };
+
+    console.log(image);
+    console.log(name);
+    console.log(position);
+    console.log(MBTI);
+    console.log(comment);
+
+    $('#updateModal').modal('hide');
+  }
+
 });
