@@ -121,6 +121,11 @@ button:hover {
   object-fit: cover;
 }
 
+/* 버튼 우측 정렬 */
+.card-btn {
+  float: right;
+}
+
 /* 팀원 카드 삭제 버튼 */
 .card-btn button {
   width: 100px;
@@ -128,11 +133,10 @@ button:hover {
   background-color: transparent;
   border: 1px solid black;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 /* 모달창 */
 .modal {
   position: absolute;
@@ -179,9 +183,7 @@ button:hover {
   border-radius: 5px;
   margin-top: 20px;
 }
-=======
-=======
->>>>>>> Stashed changes
+
 .modal {
   /*display: none;  /*평소에는 보이지 않도록*/
   position: absolute;
@@ -194,16 +196,11 @@ button:hover {
 }
 .modal .modal_popup {
   /*팝업*/
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 20px;
-<<<<<<< Updated upstream
-  }
->>>>>>> Stashed changes
-=======
-  }
->>>>>>> Stashed changes
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+}
