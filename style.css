@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Sunflower:wght@300&display=swap');
+
 /* 초기화 */
 * {
+  font-family: 'Sunflower', sans-serif;
+  font-weight: 300;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
@@ -35,6 +40,7 @@ nav {
   display: block;
   width: auto;
   height: 100%;
+  object-fit: cover;
 }
 
 /* 검색 버튼 */
@@ -84,6 +90,25 @@ button:hover {
   display: inline-block;
 }
 
+/* 팀 소개 */
+#TeamAbout {
+  height: 450px;
+}
+.rogo {
+  float: left;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+.TeamAbout-title {
+  text-align: center;
+}
+
+/* 팀원 카드 제목 */
+#TeamMembers {
+  text-align: center;
+}
+
 /* 팀원 카드 */
 .Team {
   width: 1200px;
@@ -91,8 +116,9 @@ button:hover {
 }
 
 /* 팀원 카드 이미지 크기 조절 */
-.Team img {
-  height: 398px;
+.card-img-top {
+  height: 500px;
+  object-fit: cover;
 }
 
 /* 팀원 카드 삭제 버튼 */
