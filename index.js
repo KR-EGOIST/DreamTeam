@@ -139,6 +139,33 @@ modals.forEach((modal) => {
   });
 });
 
+// 수정 버튼 클릭시 모달창 팝업
+$('.edit-btn').click(async function () {
+  let tar_id = this.value;
+  console.log(tar_id);
+
+  let tar_doc = doc(db, 'DreamTeam', tar_id);
+  let rcv_Doc = await getDoc(tar_doc);
+  let tar_data = rcv_Doc.data();
+
+  let image = tar_data.image;
+  let name = tar_data.name;
+  let position = tar_data.position;
+  let MBTI = tar_data.MBTI;
+  let comment = tar_data.comment;
+
+  /* 데이터 확인용
+  console.log(image);
+  console.log(name);
+  console.log(position);
+  console.log(MBTI);
+  console.log(comment);
+  */
+
+  $('#updateModalLabel').text("수정 대상: " + name);
+  
+});
+
 // HTML 문서의 로딩이 완료되었을 때, 해당 함수를 실행
 document.addEventListener("DOMContentLoaded", function () {
   // elements
@@ -162,33 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
-});
-
-// 수정 버튼 클릭시 모달창 팝업
-$('.edit-btn').click(async function () {
-  let tar_id = this.value;
-  console.log(tar_id);
-
-  let tar_doc = doc(db, 'DreamTeam', tar_id);
-  let rcv_Doc = await getDoc(tar_doc);
-  let tar_data = rcv_Doc.data();
-
-  let image = tar_data.image;
-  let name = tar_data.name;
-  let position = tar_data.position;
-  let MBTI = tar_data.MBTI;
-  let comment = tar_data.comment;
-
-  /* 데이터 로드 확인용
-  console.log(image);
-  console.log(name);
-  console.log(position);
-  console.log(MBTI);
-  console.log(comment);
-  */
-
-  $('#updateModalLabel').text("수정 대상: " + name);
-  
 });
 
 /* 수정완료 버튼 클릭시 Update 실행 */

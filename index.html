@@ -283,49 +283,47 @@
     </div>
   </div>
 
-<<<<<<< Updated upstream
-=======
-<!-- Modal -->
-<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="updateModalLabel">수정 대상</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="update_image" placeholder="이미지 주소">
-          <label for="floatingInput">이미지 주소</label>
+  <!-- Update 모달 -->
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="updateModalLabel">수정 대상</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="update_name" placeholder="이름">
-          <label for="floatingInput">이름</label>
+        <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_image" placeholder="이미지 주소">
+            <label for="floatingInput">이미지 주소</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_name" placeholder="이름">
+            <label for="floatingInput">이름</label>
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">직책</label>
+            <select class="form-select" id="update_position">
+              <option value="팀장">팀장</option>
+              <option value="팀원">팀원</option>
+            </select>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_MBTI" placeholder="MBTI">
+            <label for="floatingInput">MBTI</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_comment" placeholder="본인 설명">
+            <label for="floatingInput">본인 설명</label>
+          </div>
         </div>
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupSelect01">직책</label>
-          <select class="form-select" id="update_position">
-            <option value="팀장">팀장</option>
-            <option value="팀원">팀원</option>
-          </select>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary" id="confirm-btn" data-bs-dismiss="modal">저장완료</button>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="update_MBTI" placeholder="MBTI">
-          <label for="floatingInput">MBTI</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="update_comment" placeholder="본인 설명">
-          <label for="floatingInput">본인 설명</label>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-        <button type="button" class="btn btn-primary" id="confirm-btn" data-bs-dismiss="modal">저장완료</button>
       </div>
     </div>
   </div>
-</div>
->>>>>>> Stashed changes
+
 </body>
 
 </html>
