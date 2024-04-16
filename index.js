@@ -102,3 +102,33 @@ $('.delete-btn').click(async function () {
     return false;
   }
 });
+
+// 모달창
+const body = document.querySelector('body');
+const modals = document.querySelectorAll('.modal');
+const btnOpenPopups = document.querySelectorAll('.btn-open-popup');
+
+// 각 버튼에 대해 클릭 이벤트 리스너 추가
+btnOpenPopups.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.getAttribute('data-modal-target'));
+    modal.classList.toggle('show');
+
+    if (modal.classList.contains('show')) {
+      body.style.overflow = 'hidden';
+    }
+  });
+});
+
+// 모든 모달에 대해 클릭 이벤트 리스너 추가
+modals.forEach(modal => {
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.classList.remove('show');
+      
+      if (!document.querySelector('.modal.show')) {
+        body.style.overflow = 'auto';
+      }
+    }
+  });
+});
