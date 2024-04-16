@@ -8,6 +8,7 @@ import {
   addDoc,
   doc,
   deleteDoc,
+  setDoc,
   updateDoc,
 } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
 
@@ -92,7 +93,6 @@ docs.forEach((doc) => {
 });
 
 
-
 // 삭제 기능
 // this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
 $('.delete-btn').click(async function () {
@@ -139,9 +139,11 @@ modals.forEach((modal) => {
   });
 });
 
+// 대상 지정용 ID정보
+let tar_id;
 // 수정 버튼 클릭시 모달창 팝업
 $('.edit-btn').click(async function () {
-  let tar_id = this.value;
+  tar_id = this.value;
   console.log(tar_id);
 
   let tar_doc = doc(db, 'DreamTeam', tar_id);
@@ -203,7 +205,8 @@ $('#confirm-btn').click(async function () {
     // 값을 입력하지 않으면
     alert('빈칸은 불가능합니다.');
   } else {
-    let doc = {
+    /* 맨위의 참조선언의 doc와 이름이 겹침 -> doc_input으로 변경함 */
+    let doc_input = {
       image: image,
       name: name,
       position: position,
@@ -211,13 +214,19 @@ $('#confirm-btn').click(async function () {
       comment: comment,
     };
 
+    /* 수정직전 데이터 확인 */
     console.log(image);
     console.log(name);
     console.log(position);
     console.log(MBTI);
     console.log(comment);
 
+    let target = doc(db, 'DreamTeam', tar_id)
+    await setDoc(target, doc_input);
+    alert('수정되었습니다.');
+    
     $('#updateModal').modal('hide');
+    window.location.reload();
   }
 
 });
