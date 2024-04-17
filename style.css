@@ -127,12 +127,12 @@ button:hover {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-h4 {
+.TeamAbout h4 {
   font-size: 30px;
   color: #ffffff;
 }
 
-p {
+.TeamAbout p {
   font-size: 25px;
   line-height: 1.5;
   margin-bottom: 10px;
