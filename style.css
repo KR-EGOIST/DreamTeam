@@ -183,8 +183,7 @@ button:hover {
   left: 50%;
 
   width: 800px;
-  height: auto;
-
+  height: 560px;
 
   padding: 40px;
 
@@ -199,13 +198,9 @@ button:hover {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.modal_body img {
-  width: 200px;
-  height: 300px;
-}
 .modal_body #modal_top {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 .modal_body #modal_top_right {
   text-align: left;
@@ -213,6 +208,14 @@ button:hover {
 }
 .modal_body #modal_bottom {
   text-align: left;
+}
+.modal_body img {
+  width: 170px;
+  height: 250px;
+  object-fit: cover;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .btn-open-popup {
@@ -245,13 +248,4 @@ button:hover {
   padding: 20px;
   background: #ffffff;
   border-radius: 20px;
-}
-
-.modal_body img {
-  width: 170px;
-  height: 250px;
-  object-fit: cover;
-  float: left;
-  margin: 10px;
-  border-radius: 10px;
 }
