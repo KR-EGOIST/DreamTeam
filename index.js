@@ -44,6 +44,7 @@ $('#save-btn').click(async function () {
   let MBTI = $('#MBTI').val();
   let my_Blog = $('#my_Blog').val();
   let my_Github = $('#my_Github').val();
+  let comment = row['comment'];
   let advantage = $('#advantage').val();
   let my_style = $('#my_style').val();
 
