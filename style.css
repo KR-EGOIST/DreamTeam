@@ -56,13 +56,35 @@ nav {
 
 /* 토글 버튼 */
 .toggle-btn {
-  width: 150px;
+  width: 110px;
   height: 50px;
   background-color: black;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
   margin-top: 20px;
+  float: right;
+}
+
+/* 깃허브 아이콘 버튼 */
+.github-btn {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: left;
+}
+/* 블로그 아이콘 버튼 */
+.blog-btn {
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: left;
 }
 
 /* 버튼 효과 - 마우스 위에 올릴 시 그림자 생성 */
@@ -197,13 +219,14 @@ button:hover {
 }
 
 .btn-open-popup {
-  width: 150px;
+  width: 110px;
   height: 50px;
   background-color: black;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
   margin-top: 20px;
+  float: right;
 }
 
 .modal {
