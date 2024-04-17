@@ -163,11 +163,14 @@ button:hover {
   width: 800px;
   height: auto;
 
+
   padding: 40px;
 
   text-align: center;
 
-  background-color: rgb(255, 255, 255);
+  background-image: url(./resource/modal.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
 
@@ -219,4 +222,13 @@ button:hover {
   padding: 20px;
   background: #ffffff;
   border-radius: 20px;
+}
+
+.modal_body img {
+  width: 170px;
+  height: 250px;
+  object-fit: cover;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
 }

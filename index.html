@@ -80,13 +80,15 @@
                 </p>
                 <p>Github : <a href="https://github.com/KR-EGOIST" target="_blank">https://github.com/KR-EGOIST</a></p>
                 <br>
-                <h5>객관적으로 살펴본 자신의 강점</h5>
-                <hr>
-                <p>어떻게든 마감을 지킬려고하는 책임감</p>
-                <br>
-                <h5>자신의 스타일 / 협업 스타일</h5>
-                <hr>
-                <p>힘들어하는 팀원은 최대한 도움을 줄려고한다</p>
+                <div class="modal_comment">
+                  <h5>객관적으로 살펴본 자신의 강점</h5>
+                  <hr>
+                  <p>어떻게든 마감을 지킬려고하는 책임감</p>
+                  <br>
+                  <h5>자신의 스타일 / 협업 스타일</h5>
+                  <hr>
+                  <p>힘들어하는 팀원은 최대한 도움을 줄려고한다</p>
+                </div>
               </div>
             </div>
             <button class="toggle-btn">JOIN US</button>
@@ -287,8 +289,24 @@
       <label for="floatingInput">MBTI</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="comment" placeholder="본인 설명">
-      <label for="floatingInput">본인 설명</label>
+      <input type="email" class="form-control" id="my_Blog" placeholder="Blog 주소">
+      <label for="floatingInput">Blog</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="my_Github" placeholder="Github 주소">
+      <label for="floatingInput">Github</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="comment" placeholder="본인 소개">
+      <label for="floatingInput">본인 소개</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="advantage" placeholder="객관적으로 살펴본 자신의 강점">
+      <label for="floatingInput">자신의 강점</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="my_style" placeholder="자신의 스타일 / 협업 스타일">
+      <label for="floatingInput">자신의 스타일</label>
     </div>
     <div class="mybtn">
       <button id="save-btn" type="button" class="btn btn-primary">저장하기</button>
@@ -350,8 +368,24 @@
             <label for="floatingInput">MBTI</label>
           </div>
           <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_my_Blog" placeholder="Blog 주소">
+            <label for="floatingInput">Blog</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_my_Github" placeholder="Github 주소">
+            <label for="floatingInput">Github</label>
+          </div>
+          <div class="form-floating mb-3">
             <input type="email" class="form-control" id="update_comment" placeholder="본인 설명">
             <label for="floatingInput">본인 설명</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_advantage" placeholder="객관적으로 살펴본 자신의 강점">
+            <label for="floatingInput">자신의 강점</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_my_style" placeholder="자신의 스타일 / 협업 스타일">
+            <label for="floatingInput">자신의 스타일</label>
           </div>
         </div>
         <div class="modal-footer">
