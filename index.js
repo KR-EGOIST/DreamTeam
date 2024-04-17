@@ -115,7 +115,6 @@ docs.forEach((doc) => {
 
   for (let i = 0; i < 6; i++) {
     let modal_btn = document.getElementById(`modal_btn${i}`);
-
     if (name == modal_btn.parentElement.parentElement.children[0].textContent) {
       modal_btn.value = `${id}`;
       console.log(modal_btn.value);
