@@ -56,13 +56,35 @@ nav {
 
 /* 토글 버튼 */
 .toggle-btn {
-  width: 150px;
+  width: 110px;
   height: 50px;
   background-color: black;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
   margin-top: 20px;
+  float: right;
+}
+
+/* 깃허브 아이콘 버튼 */
+.github-btn {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: left;
+}
+/* 블로그 아이콘 버튼 */
+.blog-btn {
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: left;
 }
 
 /* 버튼 효과 - 마우스 위에 올릴 시 그림자 생성 */
@@ -161,8 +183,7 @@ button:hover {
   left: 50%;
 
   width: 800px;
-  height: auto;
-
+  height: 560px;
 
   padding: 40px;
 
@@ -177,13 +198,9 @@ button:hover {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.modal_body img {
-  width: 200px;
-  height: 300px;
-}
 .modal_body #modal_top {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 .modal_body #modal_top_right {
   text-align: left;
@@ -192,15 +209,24 @@ button:hover {
 .modal_body #modal_bottom {
   text-align: left;
 }
+.modal_body img {
+  width: 170px;
+  height: 250px;
+  object-fit: cover;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
+}
 
 .btn-open-popup {
-  width: 150px;
+  width: 110px;
   height: 50px;
   background-color: black;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
   margin-top: 20px;
+  float: right;
 }
 
 .modal {
@@ -222,13 +248,4 @@ button:hover {
   padding: 20px;
   background: #ffffff;
   border-radius: 20px;
-}
-
-.modal_body img {
-  width: 170px;
-  height: 250px;
-  object-fit: cover;
-  float: left;
-  margin: 10px;
-  border-radius: 10px;
 }

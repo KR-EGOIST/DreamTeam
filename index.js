@@ -110,6 +110,7 @@ docs.forEach((doc) => {
     </div>
   </div>
 </div>`;
+
   $('#card').append(temp_html);
 
   for (let i = 0; i < 6; i++) {
