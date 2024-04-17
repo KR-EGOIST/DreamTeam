@@ -160,15 +160,32 @@ button:hover {
   margin-bottom: 10px;
 }
 
+/* 팀 카드 공간 */
+#teamCard-space {
+  width: 100%;
+  height: auto;
+
+  background-color: rgba(55, 55, 55, 1);
+} 
+
 /* 팀원 카드 제목 */
 #TeamMembers {
+  color: #ffffff;
   text-align: center;
+  padding-top: 20px;
+}
+
+#TeamMembers hr {
+  border: darkgray solid 2px;
+  /* #ffffff solid 2px; */
 }
 
 /* 팀원 카드 */
 .Team {
   width: 1200px;
   margin: 30px auto 0px auto;
+
+  
 }
 
 /* 팀원 카드 이미지 크기 조절 */
@@ -220,7 +237,6 @@ button:hover {
   height: auto;
 
   padding: 40px;
-
   text-align: center;
 
   background-image: url(./resource/modal.jpg);
@@ -232,10 +248,12 @@ button:hover {
   transform: translateX(-50%) translateY(-50%);
 }
 
+/* 최하단 것을 사용하므로 없어도 됨 */
 .modal_body img {
   width: 200px;
   height: 300px;
 }
+
 .modal_body #modal_top {
   display: flex;
   align-items:center;
@@ -279,7 +297,6 @@ button:hover {
   background: #ffffff;
   border-radius: 20px;
 }
-
 .modal_body img {
   width: 170px;
   height: 250px;
@@ -287,4 +304,19 @@ button:hover {
   float: left;
   margin: 10px;
   border-radius: 10px;
+}
+
+.carousel_info {
+  width: 50%;
+  height: auto;
+
+  flex: auto;
+  align-items: center;
+  margin: auto;
+  
+  background-color: rgba(255,255,255,0.3);
+}
+
+.modal_body #modal_body_wrap {
+  background-color: rgba(255,255,255,0.7);
 }
