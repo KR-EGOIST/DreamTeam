@@ -93,15 +93,49 @@ button:hover {
 /* 팀 소개 */
 #TeamAbout {
   height: 450px;
+  margin: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .rogo {
-  float: left;
-  width: 400px;
-  height: 400px;
+  float: center;
+  width: 310px;
+  height: auto;
   margin: 20px;
+  margin-right: 100px;
+  border-radius: 5%;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
+#TeamAbout div {
+  width: 40%;
+}
+#TeamAbout div h4 {
+  background-color: #006633;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .TeamAbout-title {
-  text-align: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #006633;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+p {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 /* 팀원 카드 제목 */
@@ -163,7 +197,6 @@ button:hover {
   width: 800px;
   height: auto;
 
-
   padding: 40px;
 
   text-align: center;
@@ -183,7 +216,7 @@ button:hover {
 }
 .modal_body #modal_top {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 .modal_body #modal_top_right {
   text-align: left;
