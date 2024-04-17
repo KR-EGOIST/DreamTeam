@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img class="nav-img" src="./resource/title.jpg" alt="">
+        <img class="nav-img" src="./resource/logo.jpg" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,16 +70,25 @@
             <button class="btn-open-popup" data-modal-target="#modal1">About him</button>
             <div class="modal" id="modal1">
               <div class="modal_body">
-                <h2>윤진호</h2>
+                <img src="./resource/윤진호.jpg" alt="...">
+                <h2>윤진호&emsp;<span style="font-size: large;">팀장</span></h2>
                 <hr>
-                <p>짧은 본인 소개 / 좌우명(각오)</p>
-                <p>저는 ~~~.</p>
-                <hr>
-                <p>객관적으로 살펴본 자신의 감정</p>
-                <p>저의 강점은 ~~~.</p>
-                <hr>
-                <p>자신의 스타일 / 협업 스타일</p>
-                <p>저는 ~~~.</p>
+                <p>항상 웃는 모습을 유지하려는 나!</p>
+                <br>
+                <p>MBTI : <span>ESFJ-T</span></p>
+                <p>Blog : <a href="https://blog.naver.com/jhso5041" target="_blank">https://blog.naver.com/jhso5041</a>
+                </p>
+                <p>Github : <a href="https://github.com/KR-EGOIST" target="_blank">https://github.com/KR-EGOIST</a></p>
+                <br>
+                <div class="modal_comment">
+                  <h5>객관적으로 살펴본 자신의 강점</h5>
+                  <hr>
+                  <p>어떻게든 마감을 지킬려고하는 책임감</p>
+                  <br>
+                  <h5>자신의 스타일 / 협업 스타일</h5>
+                  <hr>
+                  <p>힘들어하는 팀원은 최대한 도움을 줄려고한다</p>
+                </div>
               </div>
             </div>
             <button class="toggle-btn">JOIN US</button>
@@ -125,16 +134,36 @@
             <div class="modal" id="modal3">
               <div class="modal_body">
                 <div class="modal_body">
-                  <h2>김동규</h2>
-                  <hr>
-                  <p>짧은 본인 소개 / 좌우명(각오)</p>
-                  <p>저는 ~~~.</p>
-                  <hr>
-                  <p>객관적으로 살펴본 자신의 감정</p>
-                  <p>저의 강점은 ~~~.</p>
-                  <hr>
-                  <p>자신의 스타일 / 협업 스타일</p>
-                  <p>저는 ~~~.</p>
+                  <div id="modal_top">
+                    <img src="./resource/김동규.jpg" width="100px" height="150px" alt="..." />
+                    <div id="modal_top_right">
+                      <div id="modal_nametag">
+                        <h3>김동규</h3>
+                        <h5>팀원</h5>
+                      </div>
+                      <p>서두르다 엎지르면 되돌릴수 없다.</p>
+                      <br>
+                      <h5>MBTI : ISFP-T</h5>
+                      <h5>Blog url : <a href="http://blog.naver.com/kdkplaton"
+                          target="_blank">https://blog.naver.com/kdkplaton</a></h5>
+                      <h5>Github url : <a href="http://github.com/Kdkplaton/Sparta"
+                          target="_blank">https://github.com/Kdkplaton/Sparta</a></h5>
+                    </div>
+                  </div>
+                  <br>
+                  <div id="modal_bottom">
+                    <p>객관적으로 살펴본 자신의 강점</p>
+                    <hr>
+                    <p>저의 강점은 한번 꽃히면 지치기 전까지 계속 진행하는 것이라고 생각합니다.</p>
+                    <br>
+                    <p>자신의 스타일 / 협업 스타일</p>
+                    <hr>
+                    <p>
+                      저는 뭔가 진행할 때 한번씩 확인하고 수행하는 편입니다.
+                      한번 듣고 제가 제대로 듣고 이해한건지 간단하게라도 확인한후 진행하는것이
+                      오판 및 에러 발생을 줄여줘서 확인절차를 간단하게나마 진행하는 걸 선호합니다.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -260,8 +289,24 @@
       <label for="floatingInput">MBTI</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="comment" placeholder="본인 설명">
-      <label for="floatingInput">본인 설명</label>
+      <input type="email" class="form-control" id="my_Blog" placeholder="Blog 주소">
+      <label for="floatingInput">Blog</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="my_Github" placeholder="Github 주소">
+      <label for="floatingInput">Github</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="comment" placeholder="본인 소개">
+      <label for="floatingInput">본인 소개</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="advantage" placeholder="객관적으로 살펴본 자신의 강점">
+      <label for="floatingInput">자신의 강점</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="my_style" placeholder="자신의 스타일 / 협업 스타일">
+      <label for="floatingInput">자신의 스타일</label>
     </div>
     <div class="mybtn">
       <button id="save-btn" type="button" class="btn btn-primary">저장하기</button>
@@ -269,7 +314,7 @@
   </div>
   <!-- 팀 소개 -->
   <div id="TeamAbout">
-    <img src="../resource/title.png" class="rogo" alt="rogo">
+    <img src="./resource/title.jpg" class="rogo" alt="rogo">
     <h1 class="TeamAbout-title">20th DEVELOPMENT TEAM</h1>
     <hr>
     <h4>개발자 팀 20조는?</h4>
@@ -323,8 +368,24 @@
             <label for="floatingInput">MBTI</label>
           </div>
           <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_my_Blog" placeholder="Blog 주소">
+            <label for="floatingInput">Blog</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_my_Github" placeholder="Github 주소">
+            <label for="floatingInput">Github</label>
+          </div>
+          <div class="form-floating mb-3">
             <input type="email" class="form-control" id="update_comment" placeholder="본인 설명">
             <label for="floatingInput">본인 설명</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_advantage" placeholder="객관적으로 살펴본 자신의 강점">
+            <label for="floatingInput">자신의 강점</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="update_my_style" placeholder="자신의 스타일 / 협업 스타일">
+            <label for="floatingInput">자신의 스타일</label>
           </div>
         </div>
         <div class="modal-footer">
