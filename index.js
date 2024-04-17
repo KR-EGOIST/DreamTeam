@@ -43,8 +43,10 @@ $('#save-btn').click(async function () {
   let position = $('#position').val();
   let MBTI = $('#MBTI').val();
   let comment = $('#comment').val();
+  let advantage = $('#advantage').val();
+  let my_style = $('#my_style').val();
 
-  if (!image || !name || !MBTI || !comment) {
+  if (!image || !name || !MBTI || !comment || !advantage || !my_style) {
     // 값을 입력하지 않으면
     alert('정보를 입력하세요!');
   } else {
@@ -54,6 +56,8 @@ $('#save-btn').click(async function () {
       position: position,
       MBTI: MBTI,
       comment: comment,
+      advantage: advantage,
+      my_style: my_style,
     };
 
     await addDoc(collection(db, 'DreamTeam'), doc);
@@ -73,6 +77,8 @@ docs.forEach((doc) => {
   let position = row['position'];
   let MBTI = row['MBTI'];
   let comment = row['comment'];
+  let advantage = row['advantage'];
+  let my_style = row['my_style'];
 
   let temp_html = `
   <div class="col">
@@ -91,7 +97,6 @@ docs.forEach((doc) => {
 </div>`;
   $('#card').append(temp_html);
 });
-
 
 // 삭제 기능
 // this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
@@ -164,33 +169,31 @@ $('.edit-btn').click(async function () {
   console.log(comment);
   */
 
-  $('#updateModalLabel').text("수정 대상: " + name);
-  
+  $('#updateModalLabel').text('수정 대상: ' + name);
 });
 
 // HTML 문서의 로딩이 완료되었을 때, 해당 함수를 실행
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   // elements
-  var modalBtn = document.getElementById("modalBtn");
-  var modal = document.getElementById("myModal");
-  var closeBtn = document.getElementById("closeBtn");
+  var modalBtn = document.getElementById('modalBtn');
+  var modal = document.getElementById('myModal');
+  var closeBtn = document.getElementById('closeBtn');
 
   // functions
   function toggleModal() {
-    modal.classList.toggle("show");
+    modal.classList.toggle('show');
   }
 
   // events
-  modalBtn.addEventListener("click", toggleModal);
-  closeBtn.addEventListener("click", toggleModal);
+  modalBtn.addEventListener('click', toggleModal);
+  closeBtn.addEventListener('click', toggleModal);
 
-  window.addEventListener("click", function (event) {
+  window.addEventListener('click', function (event) {
     // 모달의 검은색 배경 부분이 클릭된 경우 닫히도록 하는 코드
     if (event.target === modal) {
       toggleModal();
     }
-  })
-
+  });
 });
 
 /* 수정완료 버튼 클릭시 Update 실행 */
@@ -200,8 +203,10 @@ $('#confirm-btn').click(async function () {
   let position = $('#update_position').val();
   let MBTI = $('#update_MBTI').val();
   let comment = $('#update_comment').val();
+  let advantage = $('#update_advantage').val();
+  let my_style = $('#update_my_style').val();
 
-  if (!image || !name || !MBTI || !comment) {
+  if (!image || !name || !MBTI || !comment || !advantage || !my_style) {
     // 값을 입력하지 않으면
     alert('빈칸은 불가능합니다.');
   } else {
@@ -212,6 +217,8 @@ $('#confirm-btn').click(async function () {
       position: position,
       MBTI: MBTI,
       comment: comment,
+      advantage: advantage,
+      my_style: my_style,
     };
 
     /* 수정직전 데이터 확인 */
@@ -220,13 +227,14 @@ $('#confirm-btn').click(async function () {
     console.log(position);
     console.log(MBTI);
     console.log(comment);
+    console.log(advantage);
+    console.log(my_style);
 
-    let target = doc(db, 'DreamTeam', tar_id)
+    let target = doc(db, 'DreamTeam', tar_id);
     await setDoc(target, doc_input);
     alert('수정되었습니다.');
-    
+
     $('#updateModal').modal('hide');
     window.location.reload();
   }
-
 });
