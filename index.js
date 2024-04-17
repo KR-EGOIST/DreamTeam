@@ -152,6 +152,8 @@ docs.forEach((doc) => {
   }
 });
 
+// 모달창 데이터 가져오기
+
 // 삭제 기능
 // this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
 $('.delete-btn').click(async function () {
