@@ -110,8 +110,49 @@ docs.forEach((doc) => {
     </div>
   </div>
 </div>`;
+
   $('#card').append(temp_html);
+
+  for (let i = 0; i < 6; i++) {
+    let modal_btn = document.getElementById(`modal_btn${i}`);
+    if (name == modal_btn.parentElement.parentElement.children[0].textContent) {
+      modal_btn.value = `${id}`;
+      console.log(modal_btn.value);
+      let modal_html = `
+        <div id="modal_top">
+          <img src="${image}" width="100px" height="150px" alt="..." />
+          <div div id="modal_top_right">
+            <div id="modal_nametag">
+              <h3>${name}</h3>
+              <h5>${position}</h5>
+            </div>
+            <p>${comment}</p>
+            <br>
+            <h5>MBTI : ${MBTI}</h5>
+            <h5>Blog url : <a href="${my_Blog}"
+              target="_blank" style="text-decoration-line: none;">${my_Blog}</a></h5>
+            <h5>Github url : <a href="${my_Github}"
+              target="_blank" style="text-decoration-line: none;">${my_Github}</a></h5>
+          </div>
+        </div>
+        <br>
+        <div id="modal_bottom">
+          <p>객관적으로 살펴본 자신의 강점</p>
+          <hr>
+          <p>${advantage}</p>
+          <br>
+          <p>자신의 스타일 / 협업 스타일</p>
+          <hr>
+          <p>${my_style}</p>
+        </div>`;
+      $(`.modal_num${i}`).append(modal_html);
+    } else {
+      continue;
+    }
+  }
 });
+
+// 모달창 데이터 가져오기
 
 // 삭제 기능
 // this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
