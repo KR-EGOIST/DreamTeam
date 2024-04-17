@@ -42,11 +42,21 @@ $('#save-btn').click(async function () {
   let name = $('#name').val();
   let position = $('#position').val();
   let MBTI = $('#MBTI').val();
-  let comment = $('#comment').val();
+  let my_Blog = $('#my_Blog').val();
+  let my_Github = $('#my_Github').val();
   let advantage = $('#advantage').val();
   let my_style = $('#my_style').val();
 
-  if (!image || !name || !MBTI || !comment || !advantage || !my_style) {
+  if (
+    !image ||
+    !name ||
+    !MBTI ||
+    !comment ||
+    !advantage ||
+    !my_style ||
+    !my_Blog ||
+    !my_Github
+  ) {
     // 값을 입력하지 않으면
     alert('정보를 입력하세요!');
   } else {
@@ -55,6 +65,8 @@ $('#save-btn').click(async function () {
       name: name,
       position: position,
       MBTI: MBTI,
+      my_Blog: my_Blog,
+      my_Github: my_Github,
       comment: comment,
       advantage: advantage,
       my_style: my_style,
@@ -76,6 +88,8 @@ docs.forEach((doc) => {
   let name = row['name'];
   let position = row['position'];
   let MBTI = row['MBTI'];
+  let my_Blog = row['my_Blog'];
+  let my_Github = row['my_Github'];
   let comment = row['comment'];
   let advantage = row['advantage'];
   let my_style = row['my_style'];
@@ -202,6 +216,8 @@ $('#confirm-btn').click(async function () {
   let name = $('#update_name').val();
   let position = $('#update_position').val();
   let MBTI = $('#update_MBTI').val();
+  let my_Blog = $('#update_my_Blog').val();
+  let my_Github = $('#update_my_Github').val();
   let comment = $('#update_comment').val();
   let advantage = $('#update_advantage').val();
   let my_style = $('#update_my_style').val();
@@ -216,6 +232,8 @@ $('#confirm-btn').click(async function () {
       name: name,
       position: position,
       MBTI: MBTI,
+      my_Blog: my_Blog,
+      my_Github: my_Github,
       comment: comment,
       advantage: advantage,
       my_style: my_style,
@@ -226,6 +244,8 @@ $('#confirm-btn').click(async function () {
     console.log(name);
     console.log(position);
     console.log(MBTI);
+    console.log(my_Blog);
+    console.log(my_Github);
     console.log(comment);
     console.log(advantage);
     console.log(my_style);
