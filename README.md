@@ -1,6 +1,9 @@
 ## 🎓스파르타 내일배움캠프 - Node.js 5기
 ### 🚀 Welcome to 20th DEVELOPMENT TEAM ! 🚀
 ---
+
+[![HTML Badge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3.org/html/)
+
 <div style="display: flex; align-items: center;">
   <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 20%; margin-right: 20px;">
   <div style="width: 20%;">
