@@ -1,4 +1,4 @@
-## 스파르타 내일배움캠프 - Node.js 5기
+## 스파르타 내일배움캠프🎓 - Node.js 5기
 ### 🚀 Welcome to 20th DEVELOPMENT TEAM ! 🚀
 <img src="https://img.shields.io/badge/JAVA-007396?
           style=flat&logo=Java&logoColor=white"/>
