@@ -128,10 +128,10 @@ button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-#TeamAbout div h1 {
+#TeamAbout > div > h1 {
   color: #ffffff;
 }
-#TeamAbout div h4 {
+#TeamAbout > div > h4 {
   background-color: #006633;
   padding: 10px;
   border-radius: 5px;
@@ -145,12 +145,12 @@ button:hover {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-#TeamAbout div h4 {
+#TeamAbout > div > h4 {
   font-size: 30px;
   color: #ffffff;
 }
 
-#TeamAbout div p {
+#TeamAbout > div > p {
   font-size: 25px;
   line-height: 1.5;
   margin-bottom: 10px;
