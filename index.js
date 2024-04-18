@@ -113,6 +113,7 @@ docs.forEach((doc) => {
 
   $('#card').append(temp_html);
 
+  // 모달창 데이터 가져오기
   for (let i = 0; i < 6; i++) {
     let modal_btn = document.getElementById(`modal_btn${i}`);
     if (name == modal_btn.parentElement.parentElement.children[0].textContent) {
@@ -151,8 +152,6 @@ docs.forEach((doc) => {
     }
   }
 });
-
-// 모달창 데이터 가져오기
 
 // 삭제 기능
 // this 는 추가기능에서 삭제 버튼에 value 값을 저장할 것입니다.
