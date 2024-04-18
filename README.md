@@ -10,12 +10,11 @@
 ## [ 목표 ]
    <h4>미니 프로젝트</h4>
     <ul>
-      <li><strong>MBTI</strong>:</li>
-      <li><strong>자신의 장점</strong>:</li>
-      <li><strong>자신의 스타일과 협업 스타일 소개</strong>:</li>
+      <li><strong>우리팀의 스타일과 협업 스타일 소개</strong>:</li>
+                "각자의 분담을 맡고 서로 소통하면서 협업"
       <li><strong>우리 팀만의 특징과 추구하는 궁극적인 목표</strong>:</li>
-      <li><strong>우리 팀의 약속</strong>:</li>
-      <li><strong>팀원들의 GitHub 주소 및 블로그 주소</strong>:</li>
+         "디자인과 전공자들과 초보자들이 콜라보레이션"<br>
+      "이들이 모여서 각자 취업을 목표의 시작으로 미니프로젝트 구현"
     </ul>
   </div>
   
