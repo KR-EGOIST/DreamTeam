@@ -221,9 +221,7 @@ button:hover {
 
   text-align: center;
 
-  background-image: url(./resource/modal.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
 
