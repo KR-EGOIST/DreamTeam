@@ -1,154 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 /* 초기화 */
 * {
-    font-family: "Gowun Dodum", sans-serif;
+  font-family: 'Gowun Dodum', sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* 내비게이션바 */
 nav {
-    background-color: black;
+  background-color: black;
 }
 
 .nav-img {
-    height: 60px;
-    width: 60px;
-    margin-left: 20px;
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
 }
 
 .nav-link active {
-    color: white;
+  color: white;
 }
 
 /* 캐러셀 */
 .carousel-inner {
-    width: auto;
-    height: 600px;
-    /* 이미지 높이 변경 */
+  width: auto;
+  height: 600px;
+  /* 이미지 높이 변경 */
 }
 
 .carousel-item {
-    width: auto;
-    height: 100%;
+  width: auto;
+  height: 100%;
 }
 
 .d-block {
-    display: block;
-    width: auto;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 검색 버튼 */
 .search-btn {
-    width: 150px;
-    height: 50px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 /* 토글 버튼 */
 .toggle-btn {
-    width: 110px;
-    height: 50px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-top: 20px;
-    float: right;
+  width: 110px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: right;
 }
 
 /* 깃허브 아이콘 버튼 */
 .github-btn {
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 20px;
-    float: left;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: left;
 }
 /* 블로그 아이콘 버튼 */
 .blog-btn {
-    width: 50px;
-    height: 50px;
-    color: white;
-    border-radius: 5px;
-    margin-top: 20px;
-    float: left;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: left;
 }
 
 /* 버튼 효과 - 마우스 위에 올릴 시 그림자 생성 */
 button:hover {
-    border-color: orange;
-    color: orangered;
-    box-shadow: 0px 5px 5px -4px red;
+  border-color: orange;
+  color: orangered;
+  box-shadow: 0px 5px 5px -4px red;
 }
 
 /* 포스팅 박스 */
 .mypostingbox {
-    width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    box-shadow: 0px 0px 3px 0px black;
-    border-radius: 5px;
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 3px 0px black;
+  border-radius: 5px;
 }
 
 /* 포스팅 박스 저장하기 버튼 */
 .mybtn {
-    text-align: center;
+  text-align: center;
 }
 
 .mybtn button {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* 팀 소개 */
 #TeamAbout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rogo {
-    float: center;
-    width: 310px;
-    height: auto;
-    margin: 20px;
-    margin-right: 100px;
-    border-radius: 5%;
-    border: 2px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  float: center;
+  width: 310px;
+  height: auto;
+  margin: 20px;
+  margin-right: 100px;
+  border-radius: 5%;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-#TeamAbout div {
-    width: 60%;
-}
-#TeamAbout div h3 {
-    background-color: #006633;
-    padding: 10px;
-    border-radius: 5px;
+#TeamAbout > div > h4 {
+  background-color: #006633;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-#TeamAboutTitle {
-    font-size: 50px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #006633;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+#TeamAbout-title {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #006633;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-#TeamAbout h3 {
-    font-size: 25px;
-    color: #ffffff;
+#TeamAbout > div > h4 {
+  font-size: 30px;
 }
 
-#TeamAbout p {
+#TeamAbout > div > p {
   font-size: 25px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -156,172 +154,157 @@ button:hover {
 
 /* 팀원 카드 제목 */
 #TeamMembers {
-    text-align: center;
-  color: #ffffff;
   text-align: center;
-  padding-top: 20px;
-}
-
-#TeamMembers hr {
-  border: darkgray solid 2px;
-  /* #ffffff solid 2px; */
 }
 
 /* 팀원 카드 */
 .Team {
-    width: 1200px;
-    margin: 30px auto 0px auto;
   width: 1200px;
   margin: 30px auto 0px auto;
-
-  
 }
 
 .Team img {
-    width: 300px;
-    height: 500px;
+  width: 300px;
+  height: 500px;
 }
 
 /* 팀원 카드 이미지 크기 조절 */
 .card-img-top {
-    width: 300px;
-    height: 500px;
-    object-fit: cover;
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
 }
 
 /* 버튼 우측 정렬 */
 .card-btn {
-    float: right;
+  float: right;
 }
 
 /* 팀원 카드 삭제 버튼 */
 .card-btn button {
-    width: 100px;
-    height: 50px;
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-left: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /* 모달창 */
 .modal {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: none;
+  display: none;
 
-    background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal.show {
-    display: block;
+  display: block;
 }
 
 .modal_body {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    width: 800px;
-    height: auto;
+  width: 800px;
+  height: auto;
 
-    padding: 40px;
-    text-align: center;
+  padding: 40px;
 
-    background-image: url(./resource/modal.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  text-align: center;
 
-    transform: translateX(-50%) translateY(-50%);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /* 최하단 것을 사용하므로 없어도 됨 */
 .modal_body img {
-    width: 200px;
-    height: 300px;
+  width: 200px;
+  height: 300px;
 }
 
 .modal_body #modal_top {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .modal_body #modal_top_right {
-    text-align: left;
-    margin-left: 20px;
+  text-align: left;
+  margin-left: 20px;
 }
 .modal_body #modal_bottom {
-    text-align: left;
+  text-align: left;
 }
 
 .btn-open-popup {
-    width: 110px;
-    height: 50px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-top: 20px;
-    float: right;
+  width: 110px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: right;
 }
 
 .modal {
-    /*display: none;  /*평소에는 보이지 않도록*/
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
+  /*display: none;  /*평소에는 보이지 않도록*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
 }
 .modal .modal_popup {
-    /*팝업*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 20px;
+  /*팝업*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
 }
 .modal_body img {
-    width: 170px;
-    height: 250px;
-    object-fit: cover;
-    float: left;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-body {
-    background-color: #151515;
-    width: 1050px;
-    margin: 0 auto;
+  width: 170px;
+  height: 250px;
+  object-fit: cover;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 #postingbox {
-    display: none;
+  display: none;
 }
 
-.carousel_info {
-  width: 50%;
-  height: auto;
-
-  flex: auto;
-  align-items: center;
-  margin: auto;
-  
-  background-color: rgba(255,255,255,0.3);
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px;
+  height: 80px;
+  margin-top: 25%;
 }
-
-.modal_body #modal_body_wrap {
-  background-color: rgba(255,255,255,0.7);
+.btn-open-popup,
+.toggle-btn {
+  position: relative;
+  left: 135px;
+  top: 23px;
+}
+.github-btn,
+.blog-btn {
+  position: relative;
+  right: 135px;
+  top: 23px;
 }
