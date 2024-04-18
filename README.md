@@ -2,8 +2,8 @@
 ### 🚀 Welcome to 20th DEVELOPMENT TEAM ! 🚀
 ---
 <div style="display: flex; align-items: center;">
-  <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 50%; margin-right: 20px;">
-  <div style="width: 50%;">
+  <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 20%; margin-right: 20px;">
+  <div style="width: 20%;">
       </div>
 </div>
 ## [ 목표 ]
