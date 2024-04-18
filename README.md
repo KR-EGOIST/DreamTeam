@@ -6,8 +6,6 @@
   <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 10%; max-width: 100px; margin-right: 20px;">
   <div style="width: 10%;">
  
-</div>
-# 20th-DEVELOPMENT-TEAM
 
 ## [ 팀원 소개 ]
 - 팀장: 윤진호
