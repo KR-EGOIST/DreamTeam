@@ -3,10 +3,9 @@
 ---
 
 <div style="display: flex; align-items: center;">
-  <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 50%; margin-right: 20px;">
+  <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 50%; max-width: 300px; margin-right: 20px;">
   <div style="width: 50%;">
     <h4>미니 프로젝트</h4>
-    <p>우리 팀, 우리만의 이야기를 담을 수 있는 "팀 소개 웹페이지"</p>
     <ul>
       <li><strong>MBTI</strong>:</li>
       <li><strong>자신의 장점</strong>:</li>
@@ -17,3 +16,4 @@
     </ul>
   </div>
 </div>
+
