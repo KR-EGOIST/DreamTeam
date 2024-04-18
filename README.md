@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/badge/JAVA-007396?
           style=flat&logo=Java&logoColor=white"/>
 ---
-
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
 <div style="display: flex; align-items: center;">
   <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 10%; max-width: 100px; margin-right: 20px;">
   <div style="width: 10%;">
