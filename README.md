@@ -6,6 +6,7 @@
   <div style="width: 20%;">
       </div>
 </div>
+
 ## [ 목표 ]
    <h4>미니 프로젝트</h4>
     <ul>
