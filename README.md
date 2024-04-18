@@ -1,7 +1,11 @@
 ## 🎓스파르타 내일배움캠프 - Node.js 5기
 ### 🚀 Welcome to 20th DEVELOPMENT TEAM ! 🚀
 ---
-![대체 텍스트](./resource/20NODE.jpg)
+<div style="display: flex; align-items: center;">
+  <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 50%; margin-right: 20px;">
+  <div style="width: 50%;">
+      </div>
+</div>
 ## [ 목표 ]
    <h4>미니 프로젝트</h4>
     <ul>
