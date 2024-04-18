@@ -4,17 +4,8 @@
 
 <div style="display: flex; align-items: center;">
   <img src="./resource/20NODE.jpg" alt="20NODE" style="width: 10%; max-width: 100px; margin-right: 20px;">
-  <div style="width: 15%;">
- 
-
-## [ 팀원 소개 ]
-- 팀장: 윤진호
-- 팀원: 장재민
-- 팀원: 장성원
-- 팀원: 김동규
-- 팀원: 서지민
-- 팀원: 정의현
-
+  <div style="width: 10%;">
+    
 ## [ 목표 ]
    <h4>미니 프로젝트</h4>
     <ul>
@@ -26,10 +17,11 @@
       <li><strong>팀원들의 GitHub 주소 및 블로그 주소</strong>:</li>
     </ul>
   </div>
-
-## [ ㅇㅇㅇ ]
-- ㅇㅇ
-
-## [ 팀원 블로그 주소 ]
-- [팀원 1 블로그 주소](#)
-- [팀원 2 블로그 주소](#)
+  
+## [ 팀원 소개 ]
+- 팀장: 윤진호
+- 팀원: 장재민
+- 팀원: 장성원
+- 팀원: 김동규
+- 팀원: 서지민
+- 팀원: 정의현
