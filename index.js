@@ -138,11 +138,11 @@ docs.forEach((doc) => {
         </div>
         <br>
         <div id="modal_bottom">
-          <p>객관적으로 살펴본 자신의 강점</p>
+          <h5>객관적으로 살펴본 자신의 강점</h5>
           <hr>
           <p>${advantage}</p>
           <br>
-          <p>자신의 스타일 / 협업 스타일</p>
+          <h5>자신의 스타일 / 협업 스타일</h5>
           <hr>
           <p>${my_style}</p>
         </div>`;
