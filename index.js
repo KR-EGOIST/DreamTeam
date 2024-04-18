@@ -8,8 +8,7 @@ import {
   addDoc,
   doc,
   deleteDoc,
-  setDoc,
-  updateDoc,
+  updateDoc
 } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
 
 // Firebase 구성 정보 설정
@@ -214,14 +213,33 @@ $('.edit-btn').click(async function () {
   let name = tar_data.name;
   let position = tar_data.position;
   let MBTI = tar_data.MBTI;
+  let my_Blog = tar_data.my_Blog;
+  let my_Github = tar_data.my_Github;
   let comment = tar_data.comment;
+  let advantage = tar_data.advantage;
+  let my_style = tar_data.my_style;
 
-  /* 데이터 확인용
-  console.log(image);
-  console.log(name);
-  console.log(position);
-  console.log(MBTI);
-  console.log(comment);
+  $('#lbl_image').text(image);
+  $('#lbl_name').text(name);
+  $("#update_position").val(position).prop("selected", true);
+  $('#lbl_MBTI').text(MBTI);
+  $('#lbl_my_Blog').text(my_Blog);
+  $('#lbl_my_Github').text(my_Github);
+  $('#lbl_comment').text(comment);
+  $('#lbl_advantage').text(advantage);
+  $('#lbl_my_style').text(my_style);
+
+  /* 데이터 확인용*/
+  /*
+    console.log(image);
+    console.log(name);
+    console.log(position);
+    console.log(MBTI);
+    console.log(my_Blog);
+    console.log(my_Github);
+    console.log(comment);
+    console.log(advantage);
+    console.log(my_style);
   */
 
   $('#updateModalLabel').text('수정 대상: ' + name);
@@ -263,39 +281,55 @@ $('#confirm-btn').click(async function () {
   let advantage = $('#update_advantage').val();
   let my_style = $('#update_my_style').val();
 
-  if (!image || !name || !MBTI || !comment || !advantage || !my_style) {
-    // 값을 입력하지 않으면
-    alert('빈칸은 불가능합니다.');
-  } else {
-    /* 맨위의 참조선언의 doc와 이름이 겹침 -> doc_input으로 변경함 */
-    let doc_input = {
-      image: image,
-      name: name,
-      position: position,
-      MBTI: MBTI,
-      my_Blog: my_Blog,
-      my_Github: my_Github,
-      comment: comment,
-      advantage: advantage,
-      my_style: my_style,
-    };
+  let doc_input = {};
 
-    /* 수정직전 데이터 확인 */
-    console.log(image);
-    console.log(name);
-    console.log(position);
-    console.log(MBTI);
-    console.log(my_Blog);
-    console.log(my_Github);
-    console.log(comment);
-    console.log(advantage);
-    console.log(my_style);
-
-    let target = doc(db, 'DreamTeam', tar_id);
-    await setDoc(target, doc_input);
-    alert('수정되었습니다.');
-
-    $('#updateModal').modal('hide');
-    window.location.reload();
+  if (!image == false) {
+    doc_input.image = image;
   }
+  if (!name == false) {
+    doc_input.name = name;
+  }
+  if (!position == false) {
+    doc_input.position = position;
+  }
+  if (!MBTI == false) {
+    doc_input.MBTI = MBTI;
+  }
+  if (!my_Blog == false) {
+    doc_input.my_Blog = my_Blog;
+  }
+  if (!my_Github == false) {
+    doc_input.my_Github = my_Github;
+  }
+  if (!comment == false) {
+    doc_input.comment = comment;
+  }
+  if (!advantage == false) {
+    doc_input.advantage = advantage;
+  }
+  if (!my_style == false) {
+    doc_input.my_style = my_style;
+  }
+
+  /* 수정직전 데이터 확인 */
+  /*
+  console.log(image);
+  console.log(name);
+  console.log(position);
+  console.log(MBTI);
+  console.log(my_Blog);
+  console.log(my_Github);
+  console.log(comment);
+  console.log(advantage);
+  console.log(my_style);
+
+  console.log(doc_input);
+  */
+
+  let target = doc(db, 'DreamTeam', tar_id);
+  await updateDoc(target, doc_input);
+  alert('수정되었습니다.');
+
+  $('#updateModal').modal('hide');
+  window.location.reload();
 });
