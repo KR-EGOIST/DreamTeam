@@ -17,4 +17,4 @@
 
 <hr>
 :smile: : `:smile:`  
-![node](./resource/20NODE.jpg)
+![20NODE.jpg](./resource/20NODE.jpg)
