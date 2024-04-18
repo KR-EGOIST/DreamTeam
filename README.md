@@ -3,7 +3,6 @@
 <img src="https://img.shields.io/badge/JAVA-007396?
           style=flat&logo=Java&logoColor=white"/>
 ---
-<img src="https://img.shield.io/badge/html-#E34F26?style=flat&#E34F26=#E34F26">
 ## [ 목표 ]
    <h4>미니 프로젝트</h4>
     <ul>
